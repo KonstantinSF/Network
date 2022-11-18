@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+п»ї#define _CRT_SECURE_NO_WARNINGS
 #include<iostream>
 #include<fstream>
 #include <string>
@@ -9,13 +9,13 @@ void main()
 
 	setlocale(LC_ALL, ""); 
 	char number[10] = {}; 
-	char src_filename[_MAX_FNAME] = {};//sourse file to MAC and IP addresses. Воспользуемся встроен константой, чтобы самим не объявлять
-	char dst_filename[_MAX_FNAME] = {}; //destination конечный файл, в котором столцы будут swap
+	char src_filename[_MAX_FNAME] = {};//sourse file to MAC and IP addresses. Р’РѕСЃРїРѕР»СЊР·СѓРµРјСЃСЏ РІСЃС‚СЂРѕРµРЅ РєРѕРЅСЃС‚Р°РЅС‚РѕР№, С‡С‚РѕР±С‹ СЃР°РјРёРј РЅРµ РѕР±СЉСЏРІР»СЏС‚СЊ
+	char dst_filename[_MAX_FNAME] = {}; //destination РєРѕРЅРµС‡РЅС‹Р№ С„Р°Р№Р», РІ РєРѕС‚РѕСЂРѕРј СЃС‚РѕР»С†С‹ Р±СѓРґСѓС‚ swap
 
 	cout << "Enter num auditorio:"; cin >> number; 
 
-	//по введ номеру формируем имена файлов, как исходного, так и конечного 
-	strcat(src_filename, number); // strcat(dst, src) содержимое 2 строки добавл в конец строки 1. на выходе DST
+	//РїРѕ РІРІРµРґ РЅРѕРјРµСЂСѓ С„РѕСЂРјРёСЂСѓРµРј РёРјРµРЅР° С„Р°Р№Р»РѕРІ, РєР°Рє РёСЃС…РѕРґРЅРѕРіРѕ, С‚Р°Рє Рё РєРѕРЅРµС‡РЅРѕРіРѕ 
+	strcat(src_filename, number); // strcat(dst, src) СЃРѕРґРµСЂР¶РёРјРѕРµ 2 СЃС‚СЂРѕРєРё РґРѕР±Р°РІР» РІ РєРѕРЅРµС† СЃС‚СЂРѕРєРё 1. РЅР° РІС‹С…РѕРґРµ DST
 	strcat(src_filename, " RAW.txt"); //concat strings
 
 	strcat(dst_filename, number); 
@@ -34,7 +34,7 @@ void main()
 	{
 		while (!fin.eof())
 		{
-			fin >> sz_ip_buffer; //читают только до пробела или переход на новую строку!!!
+			fin >> sz_ip_buffer; //С‡РёС‚Р°СЋС‚ С‚РѕР»СЊРєРѕ РґРѕ РїСЂРѕР±РµР»Р° РёР»Рё РїРµСЂРµС…РѕРґ РЅР° РЅРѕРІСѓСЋ СЃС‚СЂРѕРєСѓ!!!
 			fin >> sz_mac_buffer;
 			cout << sz_mac_buffer << "\t\t" << sz_ip_buffer << endl;
 			fout << sz_mac_buffer << "\t\t" << sz_ip_buffer << endl;
