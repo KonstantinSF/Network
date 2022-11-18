@@ -21,7 +21,6 @@ void main()
 	strcat(dst_filename, number); 
 	strcat(dst_filename, " ready.txt");
 
-
 	const int IP_SIZE = 16; 
 	const int MAC_SIZE = 18; 
 
@@ -38,9 +37,7 @@ void main()
 			fin >> sz_mac_buffer;
 			cout << sz_mac_buffer << "\t\t" << sz_ip_buffer << endl;
 			fout << sz_mac_buffer << "\t\t" << sz_ip_buffer << endl;
-		
 		}
-
 		fin.close(); 
 	}
 	else
